@@ -59,7 +59,7 @@ const canDrink = R.curry((minAge, duck) => duck.age >= minAge)
 
 const breedDrinkers = R.curry((minAge, ducks) =>
     R.pipe(
-        R.filter(canDrink(age)),
+        R.filter(canDrink(minAge)),
         map(duck => duck.name)
     )(ducks)
 )
